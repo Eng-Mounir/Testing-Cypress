@@ -1,0 +1,89 @@
+# Detailed Guide - cypress/fixtures/products.json
+
+Generated on: 2026-03-23
+
+## 1) File Overview
+
+- File path: cypress/fixtures/products.json
+- Purpose: This fixture file stores test data used by specs through cy.fixture(...).
+
+## 2) Data Keys And Usage
+
+1. products
+2. productFilters
+
+## 3) Fixture Usage Pattern
+
+- Load fixture in tests: cy.fixture('fileName').as('aliasName')
+- Read with this.aliasName in function() test blocks.
+
+## Source Code
+
+```json
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Combination Pliers",
+      "category": "Hand Tools",
+      "price": 25.50,
+      "stock": 100,
+      "description": "Professional combination pliers"
+    },
+    {
+      "id": 2,
+      "name": "Claw Hammer",
+      "category": "Hand Tools",
+      "price": 18.99,
+      "stock": 150,
+      "description": "16oz claw hammer with rubber grip"
+    },
+    {
+      "id": 3,
+      "name": "Cordless Drill",
+      "category": "Power Tools",
+      "price": 89.99,
+      "stock": 50,
+      "description": "18V cordless drill with two batteries"
+    },
+    {
+      "id": 4,
+      "name": "Tape Measure",
+      "category": "Measuring Tools",
+      "price": 12.50,
+      "stock": 200,
+      "description": "25ft tape measure with lock mechanism"
+    },
+    {
+      "id": 5,
+      "name": "Screwdriver Set",
+      "category": "Hand Tools",
+      "price": 22.00,
+      "stock": 75,
+      "description": "8-piece screwdriver set"
+    }
+  ],
+  "productFilters": {
+    "categories": [
+      "Hand Tools",
+      "Power Tools",
+      "Measuring Tools",
+      "Safety Equipment",
+      "Hardware"
+    ],
+    "priceRanges": [
+      { "min": 0, "max": 25, "label": "Under $25" },
+      { "min": 25, "max": 50, "label": "$25 - $50" },
+      { "min": 50, "max": 100, "label": "$50 - $100" },
+      { "min": 100, "max": 999, "label": "Over $100" }
+    ],
+    "sortOptions": [
+      { "value": "name,asc", "label": "Name (A-Z)" },
+      { "value": "name,desc", "label": "Name (Z-A)" },
+      { "value": "price,asc", "label": "Price (Low to High)" },
+      { "value": "price,desc", "label": "Price (High to Low)" }
+    ]
+  }
+}
+
+```
